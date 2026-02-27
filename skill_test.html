@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Project</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+<div class="container mt-5">
+
+    <div class="d-flex justify-content-between">
+        <h2>Create Internship Requirement</h2>
+        <a href="/logout" class="btn btn-danger">Logout</a>
+    </div>
+
+    <hr>
+
+    <form method="POST">
+
+        <!-- Project Name -->
+        <div class="mb-3">
+            <label class="form-label">Project Name</label>
+            <input type="text" name="project_name" class="form-control" required>
+        </div>
+
+        <!-- Skills Section -->
+        <h5>Required Skills</h5>
+
+        <div id="skills-container">
+
+            <div class="row mb-2 skill-row">
+                <div class="col">
+                    <input type="text" name="skill_name" placeholder="Skill Name (e.g. Python)" class="form-control" required>
+                </div>
+                <div class="col">
+                    <input type="number" name="skill_weight" placeholder="Weight (e.g. 40)" class="form-control" required>
+                </div>
+            </div>
+
+        </div>
+
+        <button type="button" class="btn btn-secondary mb-3" onclick="addSkill()">
+            + Add Another Skill
+        </button>
+
+        <br>
+
+        <button type="submit" class="btn btn-primary">
+            Create Project
+        </button>
+
+    </form>
+
+</div>
+
+<script>
+function addSkill() {
+    const container = document.getElementById("skills-container");
+
+    const row = document.createElement("div");
+    row.className = "row mb-2 skill-row";
+
+    row.innerHTML = `
+        <div class="col">
+            <input type="text" name="skill_name" placeholder="Skill Name" class="form-control" required>
+        </div>
+        <div class="col">
+            <input type="number" name="skill_weight" placeholder="Weight" class="form-control" required>
+        </div>
+    `;
+
+    container.appendChild(row);
+}
+</script>
+
+</body>
+</html>

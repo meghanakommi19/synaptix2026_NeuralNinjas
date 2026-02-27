@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SkillMatch | Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(-45deg, #667eea, #764ba2, #6a11cb, #2575fc);
+            background-size: 400% 400%;
+            animation: gradientBG 10s ease infinite;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .login-container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            padding: 40px;
+            width: 350px;
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+            text-align: center;
+            color: white;
+        }
+
+        .login-container h2 {
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .input-box {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .input-box label {
+            font-size: 14px;
+        }
+
+        .input-box input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 8px;
+            border: none;
+            outline: none;
+            margin-top: 5px;
+        }
+
+        .role-select {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 8px;
+            border: none;
+            margin-top: 5px;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 10px;
+            border-radius: 8px;
+            border: none;
+            background: #ffffff;
+            color: #6a11cb;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #ddd;
+        }
+
+        .signup-link {
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+        .signup-link a {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="login-container">
+    <h2>SkillMatch Login</h2>
+
+    <form method="POST" action="/login">
+
+        <div class="input-box">
+            <label>Email</label>
+            <input type="email" name="email" required>
+        </div>
+
+        <div class="input-box">
+            <label>Password</label>
+            <input type="password" name="password" required>
+        </div>
+
+        <div class="role-select">
+            <label>Select Role</label>
+            <select name="role" required>
+                <option value="">-- Select Role --</option>
+                <option value="admin">Admin</option>
+                <option value="company">Company</option>
+                <option value="candidate">Candidate</option>
+            </select>
+        </div>
+
+        <button type="submit" class="btn">Login</button>
+
+    </form>
+
+    <div class="signup-link">
+        Don’t have an account? <a href="/signup">Sign Up</a>
+    </div>
+
+</div>
+
+</body>
+</html>

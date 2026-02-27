@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Candidate Skill Test</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<canvas id="bgCanvas"></canvas>
+
+<div class="card">
+    <h2>Candidate Skill Assessment</h2>
+    <form method="POST">
+        <input type="text" name="name" placeholder="Candidate Name" required>
+
+        {% for skill in skills %}
+            <label>{{ skill }} (Score out of 10)</label>
+            <input type="number" name="{{ skill }}" max="10" required>
+        {% endfor %}
+
+        <button type="submit">Calculate Match</button>
+    </form>
+</div>
+
+<script src="{{ url_for('static', filename='canvas.js') }}"></script>
+</body>
+</html>

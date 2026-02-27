@@ -1,0 +1,44 @@
+body {
+    margin:0;
+    font-family: Arial;
+    background: #0f172a;
+    color: white;
+}
+
+canvas {
+    position: fixed;
+    z-index: -1;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 30px;
+    backdrop-filter: blur(10px);
+    background: rgba(255,255,255,0.1);
+    border-radius: 15px;
+    margin-top: 50px;
+}
+
+input, button {
+    padding:10px;
+    margin:5px;
+    border-radius:8px;
+    border:none;
+}
+
+button {
+    background:#38bdf8;
+    color:white;
+    cursor:pointer;
+}
+
+table {
+    width:100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding:10px;
+    text-align:center;
+}
