@@ -1,0 +1,21 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.hero-bg {
+    background: linear-gradient(to right, #e3f2fd, #ffffff);
+    height: 100vh;
+}
+
+.dashboard-bg {
+    background: linear-gradient(to right, #f5f9ff, #ffffff);
+    min-height: 100vh;
+}
+
+.card {
+    border: none;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
